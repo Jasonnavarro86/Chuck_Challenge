@@ -11,7 +11,7 @@ an empty list.
 ## Instructions for running the app
 
 + Clone this repo via your terminal or command prompt.
-+ Run "npm -install" to install all dependencies in the application.
++ Run "npm install" to install all dependencies in the application.
 + Run "npm start" to start the application.
 
 ## Instructions for using the app
