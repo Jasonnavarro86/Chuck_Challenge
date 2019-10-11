@@ -19,6 +19,7 @@ an empty list.
 + Click on the load button to get a list of 10 random jokes.
 + Click on the trash icon to delete them from the dom.
 + Click the load button at anytime to get a new list of 10 new jokes.
++ Enjoy good Chuck Norris jokes :).
 
 
 ## Live Demo
