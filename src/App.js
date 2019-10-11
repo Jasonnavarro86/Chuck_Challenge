@@ -4,7 +4,7 @@ import { Provider } from 'react-redux'
 import store from './store';
 
 const App = () =>
-
+//Setting Provider at the root of the application
     <Provider store={store}>
         <section className="container mt-5">
           <hr />

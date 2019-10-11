@@ -3,7 +3,7 @@ import { LOAD_JOKES, FETCH_JOKES, DELETE_JOKE } from '../actions/types';
 const initialState = {
     //Calling the API end point only one time and storing the JSON in our State.
     apiList: [],
-    //Separating the 10 random facts from the main api list for better data manipulation and up scaling opportunities in the future.
+    //Separating the 10 random facts from the main api list for better data manipulation and for up scaling opportunities in the future.
     renderList: []
 }
 
@@ -12,7 +12,7 @@ export default function (state = initialState, action) {
     switch (action.type) {
 
         case LOAD_JOKES:
-            //Adding a 'viewed' boolean to each fact (one time on load) to avoid repetition and leaving the door open for other options.
+            //Adding a 'viewed' boolean to each fact (one time on page load) to avoid repetition while leaving the door open for scaling.
             const loadNewList = action.payload.map(data => {
                 data['viewed'] = false;
                 return data;
@@ -26,7 +26,7 @@ export default function (state = initialState, action) {
             return {
                 ...state,
                 renderList: newLists.newTenFacts,
-                //I update the main api list to reflects the changes of the viewed property for these specific 10
+                //I update the main api list to reflect the 'viewed' changes.
                 apiList: newLists.newApiList
             }
         case DELETE_JOKE:
@@ -44,7 +44,7 @@ export default function (state = initialState, action) {
 }
 
 const getTenRandomFacts = (arr) => {
-   
+
     const newTenFactsArray = [];
 
     while (newTenFactsArray.length < 10) {
